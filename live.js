@@ -1,4 +1,4 @@
- /*
+/*
   Live.js - One script closer to Designing in the Browser
   Written for Handcraft.com by Martin Kool (@mrtnkl).
 
@@ -6,7 +6,7 @@
   Recent change: Made stylesheet and mimetype checks case insensitive.
 
   http://livejs.com
-  http://livejs.com/license (MIT)  
+  http://livejs.com/license.txt (MIT)  
   @livejs
 
   Include live.js#css to monitor css changes only.
@@ -202,6 +202,7 @@
       pendingRequests[url] = true;
       var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XmlHttp");
       xhr.open("HEAD", url, true);
+      xhr.setRequestHeader("Cache-Control", "no-cache, no-store, max-age=0");
       xhr.onreadystatechange = function () {
         delete pendingRequests[url];
         if (xhr.readyState == 4 && xhr.status != 304) {
