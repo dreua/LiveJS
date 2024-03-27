@@ -34,8 +34,8 @@
   var Live = {
 
     // performs a cycle per interval
-    heartbeat: function () {      
-      if (document.body) {        
+    heartbeat: function () {
+      if (document.body) {
         // make sure all resources are loaded on first activation
         if (!loaded) Live.loadresources();
         Live.checkForChanges();
@@ -139,7 +139,7 @@
     // act upon a changed url of certain content type
     refreshResource: function (url, type) {
       switch (type.toLowerCase()) {
-        // css files can be reloaded dynamically by replacing the link element                               
+        // css files can be reloaded dynamically by replacing the link element
         case "text/css":
           var link = currentLinkElements[url],
               html = document.body.parentNode,
@@ -159,7 +159,7 @@
           Live.removeoldLinkElements();
           break;
 
-        // check if an html resource is our current url, then reload                               
+        // check if an html resource is our current url, then reload
         case "text/html":
           if (url != document.location.href)
             return;
@@ -230,5 +230,5 @@
     window.liveJsLoaded = true;
   }
   else if (window.console)
-    console.log("Live.js doesn't support the file protocol. It needs http.");    
+    console.log("Live.js doesn't support the file protocol. It needs http.");
 })();
