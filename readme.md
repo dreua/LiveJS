@@ -1,3 +1,5 @@
+This is a maintained fork of the seemingly abandoned [LiveJS](https://github.com/Q42/LiveJS). Contributions welcome!
+
 # How?
 
 Just include Live.js and it will monitor the current page including local CSS and Javascript by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page. Try it!
@@ -9,7 +11,3 @@ Live.js works in Firefox, Chrome, Safari, Opera and IE6+ until proven otherwise.
 # Why?
 
 Live.js was written by Martin Kool as the next step in Handcraft's design in the browser strategy. But similar to when we open sourced Backfire (which allows you to save CSS changes made with Firebug) it seemed natural to once again share the code.
-
-# Twitter
-
-Follow @livejs or mention #livejs.
